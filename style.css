@@ -5,8 +5,6 @@
   }
 
 /*----------------------------------------------------------------------------------------------------------------------------------*/
-body{ /* Con questi 2 comandi faccio in modo tale che la pagina non si storpi se troppo allargata*/
-}
 
 .content{/* DA RIVEDERE PER LA GESTIONE DEGLI SPAZI IN MODO PULITO*/
 }
@@ -24,16 +22,16 @@ nav ul {     /*correctly positions links and centered position of the ul block *
 }
 
 nav li {
-    width: 100%;  /*Used for mobile version to avoid too close content */
+  width: 100%;  /*Used for mobile version to avoid too close content */
   list-style-type: none;
-  font-size: 20px;
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
   font-size: 25px;
+  border-bottom: 1px solid #D6D9DC;
 }
 
-nav a:link,
+nav a:link, /*simplify the visuals for the mobile version*/
 nav a:visited,
 div a:link,
 div a:visited {
@@ -41,7 +39,7 @@ div a:visited {
   text-decoration: none;
 }
 /*----------------------------------------------------------------------------------------------------------------------------------*/
-.presentation-image{
+.presentation-image{ /**/
   height: 600px;
   display: flex;
   flex-direction: column;
@@ -75,7 +73,7 @@ div a:visited {
   padding-bottom: 5px;
 }
 /*----------------------------------------------------------------------------------------------------------------------------------*/
-.prova{
+.container-skills{
   background-color: #461ba4;
   padding: 10px 0 10px 0;
 }
@@ -190,9 +188,7 @@ footer {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  padding-left: 20px;
+  margin: 20px 30px 20px 0;
 }
 
 div ul{
@@ -217,11 +213,12 @@ div li{
 /* Desktop Styles */
 @media only screen and (min-width: 900px) {
   nav li {
-      width: 33%;
+      width: 33%;  /*keep everything on one line*/
+      border: none;
   }
 
   nav a:hover{
-    color: Red;
+    color: #461ba4; /*great for pc version*/
   }
 /*------------------------------------------------------------------------------------------------------------------*/
 
@@ -250,7 +247,7 @@ div li{
     padding-bottom: 10px;
   }
 /*------------------------------------------------------------------------------------------------------------------*/
-.prova{
+.container-skills{
   display: flex;
   justify-content: center;
 }

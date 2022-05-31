@@ -3,57 +3,62 @@
   <head>
     <meta charset="utf-8">
     <meta name='viewport'
-      content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'/>
-    <title>Personale WebSite</title>
-    <link rel='stylesheet' href='style.css'/>
+      content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'/> <!-- I prevent mobile devices from changing scale-->
+    <title>Personal WebSite</title>
+    <link rel='stylesheet' href='style.css'/> <!--Link to csss-->
   </head>
   <body>
   <article>
+    <!-- Navigation menu -->
     <nav>
       <ul>
         <li><a href='#navigate-about'>About</a></li>
         <li><a href='#navigate-skills'>Skills</a></li>
-        <li><a href='#navigate-projects'>Contact Me</a></li>
+        <li><a href='#navigate-contact'>Contact Me</a></li>
       </ul>
     </nav>
+    <!-- presentation-image -->
     <div class="presentation-image" style="background-image: url('img/title-img.png');">
      <h1 style="color: white; font-size: 50px; padding-left: 30px; font-family: Verdana, sans-serif;"  class="bob">GABRIELE STRINGANO </h1>
      <p style="color: white; font-size: 20px;">Full-Stack WebDeveloper</p>
     </div>
-    <h1 id="navigate-about" style="text-align:center; font-size:40px; padding:20px;">ABOUT ME</h1>
+    <!-- about-me  -->
+    <h1 id="navigate-about" style="text-align:center; font-size:40px; padding:20px;">About Me</h1>
     <div class="about-me">
-        <div class="about-me-style">
-          <div>
+      <div class="about-me-style">
+        <div>
           <img style="border-radius: 20px;" src="img/me.png" height="400" width="290"/>
           <p style="text-align:center; font-size: 15px;
-              border-radius: 10px; margin-top:10px;"> (Mostra d'arte digitale a Milano 2022)
+            border-radius: 10px; margin-top:10px;"> (Mostra d'arte digitale a Milano 2022)
           </p>
         </div>
-        </div>
-        <div class="about-me-style">
-          <div class="about-me-text">
-            <h2 class="text">Ciao</h2>
-            <p class="text">Mi chiamo gabriele Stringano</p>
-            <p class="text">Sto studiando presso start2impact per diventare Web Developer.</p>
-            <p class="text">Non mi stanco mai di scrivere miriadi e miriadi di righe di codice. </p>
-            <p class="text">Mi piace leggere articoli e libri sulla finanza e crecita personale, sono sempre in cerca di attivita' da fare in gruppo. Pubblico video su youtube, riguardo le crypto, con altri amici. </p>
-          </div>
-        </div>
-    </div>
-    <h1 id="navigate-skills" style="text-align:center; font-size:40px; padding:20px; color:#461ba4">MY SKILLS</h1>
-    <div class="prova"> <!-- DA CORREGGERE-->
-    <div class="skills">
-      <div class="skills-style">
-        <img class="skills-text" src="img/html2.png" height="250" width="200"/>
-        <p class="skills-text" ><strong>HTML</strong>, or HyperText Markup Language, allows web users to create and structure sections, paragraphs, and links using elements, tags, and attributes.</p>
       </div>
-      <div class="skills-style">
-        <img class="skills-text" src="img/cssc.png" height="250" width="200"/>
-        <p class="skills-text"><strong>CSS</strong>, or Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.</p>
+      <div class="about-me-style">
+        <div class="about-me-text">
+          <h2 class="text">Ciao</h2>
+          <p class="text">Mi chiamo gabriele Stringano</p>
+          <p class="text">Sto studiando presso start2impact per diventare Web Developer.</p>
+          <p class="text">Non mi stanco mai di scrivere miriadi e miriadi di righe di codice. </p>
+          <p class="text">Mi piace leggere articoli e libri sulla finanza e crecita personale, sono sempre in cerca di attivita' da fare in gruppo. Pubblico video su youtube, riguardo le crypto, con altri amici. </p>
+        </div>
       </div>
     </div>
+    <!-- skills -->
+    <h1 id="navigate-skills" style="text-align:center; font-size:40px; padding:20px; color:#461ba4">My Skills</h1>
+    <div class="container-skills"> <!-- DA CORREGGERE-->
+      <div class="skills">
+        <div class="skills-style">
+          <img class="skills-text" src="img/html2.png" height="250" width="200"/>
+          <p class="skills-text" ><strong>HTML</strong>, or HyperText Markup Language, allows web users to create and structure sections, paragraphs, and links using elements, tags, and attributes.</p>
+        </div>
+        <div class="skills-style">
+          <img class="skills-text" src="img/cssc.png" height="250" width="200"/>
+          <p class="skills-text"><strong>CSS</strong>, or Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.</p>
+        </div>
+      </div>
     </div>
-    <h2 id="navigate-projects" style="text-align:center; font-size:40px; padding-top:20px;">Contact Me</h2>
+    <!-- skills -->
+    <h1 id="navigate-contact" style="text-align:center; font-size:40px; padding-top:20px;">Contact Me</h1>
     <div class="Contattami" >
       <form action='' method='get' class='speaker-form'>
         <div class='form-row'>
@@ -84,6 +89,7 @@
           </div>
         </form>
       </div>
+    <!-- footer -->
     <footer>
      <div class="footer-style">
       <div class="footer-text">
