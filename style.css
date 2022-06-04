@@ -8,6 +8,9 @@
 
 .content{/* DA RIVEDERE PER LA GESTIONE DEGLI SPAZI IN MODO PULITO*/
 }
+.article-text{
+  font-family: "Helvetica", "Arial", sans-serif;
+}
 /*----------------------------------------------------------------------------------------------------------------------------------*/
 nav {
   background-color: gray;
