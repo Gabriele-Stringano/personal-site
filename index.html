@@ -7,6 +7,13 @@
     <title>Personal WebSite</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.jpg">
     <link rel='stylesheet' href='style.css'/> <!--Link to csss-->
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+        emailjs.init('OLBZ3vqHqGpX5T52Q');
+      })();
+  </script>
   </head>
   <body>
   <article>
@@ -60,36 +67,25 @@
     </div>
     <!-- contact-me -->
     <h1 class="article-text" id="navigate-contact" style="text-align:center; font-size:40px; padding-top:20px;">Contact Me</h1>
-    <div class="Contattami" >
-      <form action='' method='get' class='speaker-form'>
+    <form id="myForm" class="contactme">
+      <div class='speaker-form'>
         <div class='form-row'>
-          <label for='full-name'>Nome</label>
-          <input id='full-name' name='full-name' type='text'/>
-      </div>
+          <label for='from_name'>Name</label>
+          <input id='from_name' name='from_name' type='text' required/>
+        </div>
         <div class='form-row'>
-          <label for='email'>Email</label>
-          <input id='email'
-            name='email'
-            type='email'
-            placeholder='joe@example.com'/>
-          </div>
-          <div class='form-row'>
-            <label for='abstract'>Contenuto</label>
-            <textarea id='abstract' name='abstract' placeholder='Inserisci il testo'></textarea>
-          </div>
-          <div class='form-row'>
-            <label class='checkbox-label' for='available'>
-              <input id='available'
-              name='available'
-              type='checkbox' value='is-available'/>
-              <span>Desidero rimanere aggiornato sui progetti futuri</span>
-            </label>
-          </div>
-          <div class='form-row'>
-            <button>Submit</button>
-          </div>
-        </form>
+          <label for='email_id'>Email</label>
+          <input id='email-id' name='email_id' type='email' placeholder='name@example.com' required/>
+        </div>
+        <div class='form-row'>
+            <label for='message'>Text</label>
+            <textarea id='message' name='message' placeholder='Inserisci il testo' required></textarea>
+        </div>
+        <div class='form-row'>
+          <button type"submit" id="button"> Send </button>
+        </div>
       </div>
+    </form>
     <!-- footer -->
     <footer>
      <div class="footer-style">
@@ -117,4 +113,29 @@
     </footer>
   </article>
   </body>
+
+  <script>
+        // listen to the form submission
+        document
+          .getElementById("myForm")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const serviceID = "service_imo2g1a";
+            const templateID = "template_ssn1m0q";
+
+            // send the email here
+            emailjs.sendForm(serviceID, templateID, this).then(
+              (response) => {
+                console.log("SUCCESS!", response.status, response.text);
+                alert("SUCCESS!");
+                document.getElementById("button").style.display = "none";
+              },
+              (error) => {
+                console.log("FAILED...", error);
+                alert("FAILED...", error);
+              }
+            );
+          });
+      </script>
 </html>
