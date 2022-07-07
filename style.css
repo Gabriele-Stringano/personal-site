@@ -4,6 +4,10 @@
     box-sizing: border-box;
   }
 
+  html {
+  scroll-behavior: smooth;
+}
+
 /*----------------------------------------------------------------------------------------------------------------------------------*/
 
 .article-text{
@@ -65,18 +69,18 @@ div a:visited {
   justify-content: space-around;
 }
 
-.about-me-text{ /* Usato per dare uno stile al testo di tutto il contenitore*/
+.about-me-text{ /*Used to change the text style for the entire container*/
   padding-top: 10px;
   padding-left: 30px;
   font-size: 20px;
 }
 
-.text{ /*Utilizzato per dare spazio ai vari paragrfi del testo*/
+.text{ /*Used to give space for the various paragraphs in the text*/
   padding-bottom: 5px;
   font-family: "Helvetica", "Arial", sans-serif;
 }
 /*----------------------------------------------------------------------------------------------------------------------------------*/
-.container-skills{
+.container-skills{ /*used to manage the position of elements in the block*/
   background-color: #461ba4;
   padding: 10px 0 10px 0;
 }
@@ -90,7 +94,7 @@ div a:visited {
   margin-bottom: 30px;
 }
 
-.skills-style{  /* LAVORARE QUA*/
+.skills-style{  /* */
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -100,7 +104,7 @@ div a:visited {
   margin-top: 20px;
   align-items: center;
 }
-.skills-text{
+.skills-text{ /*Used to change the text style*/
   margin: 40px;
   font-size: 20px;
   font-family: "Helvetica", "Arial", sans-serif;
@@ -113,16 +117,17 @@ div a:visited {
   justify-content: center;
 }
 
-.speaker-form { /*contenitore del form*/
+.speaker-form { /*Form container*/
   background-color: #F6F7F8;
-  border: 1px solid #D6D9DC;
+  border: 2px solid #D6D9DC;
   width: 400px;
   border-radius: 20px;
   padding: 50px 50px  5px 50px;
   margin: 0 0 40px 0;
+  border-color:#461ba4 ;
 }
 
-.form-row { /*uso flexbox per gestire il contenuto dei vari div elemnti*/
+.form-row { /*Used flexbox to manage the content of various div elements*/
   margin-bottom: 40px;
   display: flex;
 }
@@ -240,17 +245,17 @@ div li{
     padding: 30px 0 10px 0;
   }
 
-  .about-me-text{ /* Usato per dare uno stile al testo di tutto il contenitore*/
+  .about-me-text{ /*Is used to change the text style for the entire container*/
     padding-top: 10px;
     font-size: 30px;
     padding-left: 0px;
   }
 
-  .text{ /*Utilizzato per dare spazio ai vari paragrfi del testo*/
+  .text{ /*Used to give space for the various paragraphs in the text*/
     padding-bottom: 10px;
   }
 /*------------------------------------------------------------------------------------------------------------------*/
-.container-skills{
+.container-skills{ /*used to manage the position of elements in the block*/
   display: flex;
   justify-content: center;
 }
