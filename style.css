@@ -9,12 +9,7 @@
 }
 
 /*----------------------------------------------------------------------------------------------------------------------------------*/
-.fixed-top {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
+article{
 }
 
 /*----------------------------------------------------------------------------------------------------------------------------------*/
@@ -39,7 +34,7 @@
 /*----------------------------------------------------------------------------------------------------------------------------------*/
 .about-me{
   margin-top: 10px;
-  height: 800px;
+  height: 925px;
   display: flex;
   flex-direction: column;
 }
@@ -80,7 +75,7 @@
   background-color: white;
   border-radius: 20px;
   height: 600px;
-  width: 400px;
+  width: 360px;
   margin-top: 20px;
   align-items: center;
 }
@@ -100,7 +95,7 @@
 .speaker-form { /*Form container*/
   background-color: #F6F7F8;
   border: 2px solid #D6D9DC;
-  width: 400px;
+  width: 360px;
   border-radius: 20px;
   padding: 50px 50px  5px 50px;
   margin: 0 0 40px 0;
