@@ -1,11 +1,20 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: content-box;
   }
 
   html {
   scroll-behavior: smooth;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
 }
 
 /*----------------------------------------------------------------------------------------------------------------------------------*/
@@ -14,35 +23,9 @@
   font-family: "Helvetica", "Arial", sans-serif;
 }
 /*----------------------------------------------------------------------------------------------------------------------------------*/
-nav {
-  background-color: gray;
-  padding-top: 10px;
-}
-
-nav ul {     /*correctly positions links and centered position of the ul block */
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 750px; /*Is used to keep close LI */
-  margin: auto; /*centring */
-}
-
-nav li {
-  width: 100%;  /*Used for mobile version to avoid too close content */
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
-  font-size: 25px;
-  border-bottom: 1px solid #D6D9DC;
-  font-family: "Helvetica", "Arial", sans-serif;
-}
-
-nav a:link, /*simplify the visuals for the mobile version*/
-nav a:visited,
-div a:link,
-div a:visited {
-  color: white;
-  text-decoration: none;
+.header-style{
+ margin-left: 11px;
+ border-bottom: 3px solid #D6D9DC;
 }
 /*----------------------------------------------------------------------------------------------------------------------------------*/
 .presentation-image{
@@ -73,12 +56,9 @@ div a:visited {
   padding-top: 10px;
   padding-left: 30px;
   font-size: 20px;
+   font-family: "Helvetica", "Arial", sans-serif;
 }
 
-.text{ /*Used to give space for the various paragraphs in the text*/
-  padding-bottom: 5px;
-  font-family: "Helvetica", "Arial", sans-serif;
-}
 /*----------------------------------------------------------------------------------------------------------------------------------*/
 .container-skills{ /*used to manage the position of elements in the block*/
   background-color: #461ba4;
@@ -181,7 +161,7 @@ div a:visited {
 
 /*----------------------------------------------------------------------------------------------------------------------------------*/
 footer {
-  background-color: #54575A;
+  background-color: #212529;
 }
 
 .footer-style{
@@ -200,14 +180,14 @@ footer {
   margin: 20px 0 20px 20px;
 }
 
-div ul{
+.footer-ul{
   display: flex;
   flex-wrap: wrap;
   width: 450px; /*Is used to keep close LI */
   margin-right: 30px;   /*centring */
 }
 
-div li{
+.footer-il{
   width: 33.3%;  /*Used for mobile version to avoid too close content */
   list-style-type: none;
   font-size: 20px;
@@ -221,14 +201,9 @@ div li{
 
 /* Desktop Styles */
 @media only screen and (min-width: 900px) {
-  nav li {
-      width: 33%;  /*keep everything on one line*/
-      border: none;
-  }
-
-  nav a:hover{
-    color: #461ba4; /*great for pc version*/
-  }
+.header-style{
+border-bottom: none;
+}
 /*------------------------------------------------------------------------------------------------------------------*/
 
   .presentation-image{
@@ -239,7 +214,7 @@ div li{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 600px;
+    height: 650px;
   }
   .about-me-style{
     padding: 30px 0 10px 0;
@@ -249,10 +224,6 @@ div li{
     padding-top: 10px;
     font-size: 30px;
     padding-left: 0px;
-  }
-
-  .text{ /*Used to give space for the various paragraphs in the text*/
-    padding-bottom: 10px;
   }
 /*------------------------------------------------------------------------------------------------------------------*/
 .container-skills{ /*used to manage the position of elements in the block*/
@@ -274,8 +245,10 @@ div li{
     width: 40%;
   }
 
-  div ul{
+  .footer-ul{
     justify-content: flex-end;
   }
-
+  .footer-il{
+    width: 25%;
+  }
 }

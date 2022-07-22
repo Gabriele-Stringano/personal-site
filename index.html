@@ -4,9 +4,12 @@
     <meta charset="utf-8">
     <meta name='viewport'
       content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'/> <!-- I prevent mobile devices from changing scale-->
-    <title>Personal WebSite</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon.jpg">
-    <link rel='stylesheet' href='style.css'/> <!--Link to csss-->
+    <title>GS | Full Stack Developer </title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.jpg"> <!--Favicon Image-->
+    <link rel='stylesheet' href='style.css'/> <!--Link to css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+    crossorigin="anonymous"> <!--Link to Bootstrap-->
     <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
@@ -18,20 +21,37 @@
   <body>
   <article>
     <!-- Navigation menu -->
-    <nav>
-      <ul>
-        <li><a href='#navigate-about'>About</a></li>
-        <li><a href='#navigate-skills'>Skills</a></li>
-        <li><a href='#navigate-contact'>Contact Me</a></li>
-      </ul>
-    </nav>
+    <nav class="navbar fixed-top shadow-sm navbar-expand-md bg-dark navbar-dark py-3 py-lg-0 px-lg-5 fs-5"> <!-- navbar-expand--->
+        <div class="navbar-text">
+          <img src="img/favicon.jpg" alt="Me" width="50" height="50" class="d-inline-block align-top">
+            <p style= "float: right; margin-left:10px; margin-top:10px;"> GABRIELE STRINGANO </p>
+        </div>
+        <button type="button" name="button" class="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#toggleMobileMenu"
+        aria-controls="toggleMobileMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="toggleMobileMenu">
+        <ul class="navbar-nav text-center ms-auto">
+          <li><a class="nav-link header-style" href='#navigate-about'>About</a></li>
+          <li><a class="nav-link header-style" href='#navigate-skills'>Skills</a></li>
+          <li><a class="nav-link header-style" href='#navigate-contact'>Contact Me</a></li>
+        </ul>
+      </div>
+      </nav>
+
     <!-- presentation-image -->
     <div class="presentation-image" style="background-image: url('img/title-img.png');">
-     <h1 style="color: white; font-size: 50px; padding-left: 30px; font-family: Verdana, sans-serif;"  class="bob">GABRIELE STRINGANO </h1>
+     <h1 style="color: white; font-size: 52px;  font-family: Verdana, sans-serif;">GABRIELE STRINGANO </h1>
      <p class="article-text" style="color: white; font-size: 20px;">Full-Stack WebDeveloper</p>
     </div>
+
     <!-- about-me  -->
-    <h1 class="article-text" id="navigate-about" style="text-align:center; font-size:40px; padding:20px;">About Me</h1>
+    <h2 class="article-text" id="navigate-about" style="text-align:center; font-size:40px; padding:20px;">About Me</h2>
     <div class="about-me">
       <div class="about-me-style">
         <div>
@@ -52,7 +72,7 @@
       </div>
     </div>
     <!-- skills -->
-    <h1 class="article-text" id="navigate-skills" style="text-align:center; font-size:40px; padding:20px; color:#461ba4;">My Skills</h1>
+    <h2 class="article-text" id="navigate-skills" style="text-align:center; font-size:40px; padding:20px; color:#461ba4;">My Skills</h2>
     <div class="container-skills">
       <div class="skills">
         <div class="skills-style">
@@ -66,7 +86,7 @@
       </div>
     </div>
     <!-- contact-me -->
-    <h1 class="article-text" id="navigate-contact" style="text-align:center; font-size:40px; padding-top:20px;">Contact Me</h1>
+    <h2 class="article-text" id="navigate-contact" style="text-align:center; font-size:40px; padding-top:20px;">Contact Me</h2>
     <form id="myForm" class="contactme">
       <div class='speaker-form'>
         <div class='form-row'>
@@ -82,7 +102,7 @@
             <textarea id='message' name='message' placeholder='Inserisci il testo' required></textarea>
         </div>
         <div class='form-row'>
-          <button type"submit" id="button"> Send </button>
+          <button type"submit" id="button"> Email me </button>
         </div>
       </div>
     </form>
@@ -92,18 +112,18 @@
       <div class="footer-text">
         <p>Powered by gabrielestringano@gmail.com</p>
       </div>
-        <ul>
-          <li>
+        <ul class="footer-ul">
+          <li class="footer-il">
             <a href='https://twitter.com/walsh_master'>
               <img src="img/twitter.png" height="35" width="35"/>
             </a>
           </li>
-          <li>
+          <li class="footer-il">
             <a href='https://github.com/Gabriele-Stringano'>
               <img src="img/github.png" height="35" width="35"/>
             </a>
           </li>
-          <li>
+          <li class="footer-il">
             <a href='https://www.linkedin.com/in/gabriele-stringano-44a80a230'>
              <img src="img/linkedin.png" height="35" width="35"/>
             </a>
@@ -112,6 +132,9 @@
      </div>
     </footer>
   </article>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+  crossorigin="anonymous"></script>  <!-- Bootstrap Script-->
   </body>
 
   <script>
