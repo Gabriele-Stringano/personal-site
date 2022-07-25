@@ -1,0 +1,30 @@
+.container-skills{ /*used to manage the position of elements in the block*/
+  background-color: #461ba4;
+  padding: 10px 0 10px 0;
+}
+
+.skills{
+  @include AlignCenter();
+  margin-top: 10px;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.skills-style{
+  @include AlignCenter();
+  flex-direction: column;
+  background-color: white;
+  border-radius: 20px;
+  height: 600px;
+  width: 360px;
+  margin-top: 20px;
+}
+.skills-text{ /*Used to change the text style*/
+  margin: 40px;
+  font-size: 20px;
+  font-family: $font-stack;
+
+}
+
+// REMEMBER THE MEDIA SCREEN SECTION IN THE STYLE.CSS!!

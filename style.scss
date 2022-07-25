@@ -1,0 +1,150 @@
+
+$font-stack: "Helvetica", "Arial", sans-serif;
+
+@mixin AlignCenter{
+  display: flex;
+  align-items: center;
+}
+@mixin JustifyCenter{
+  display: flex;
+  justify-content: center;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+  }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+  .header-style{ //contains the style of the text in the navbar
+    margin-left: 11px;
+    border-bottom: 3px solid #D6D9DC;
+  }
+
+  /*----------------------------------------------------------------------------------------------------------------------------------*/
+  .article-text{ //contains the style of all sections (h2) of the page
+    text-align:center;
+    font-size:40px;
+    padding:20px;
+  }
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+.presentation-image{
+  margin-top: 70px;
+  height: 600px;
+  @include AlignCenter();
+  flex-direction: column;
+  justify-content: center;
+    h1{
+    color: white;
+    font-size: 52px;
+    font-family: Verdana, sans-serif;
+    text-align: center;
+    }
+    p{
+      color: white;
+      font-size: 20px;
+      font-family: $font-stack;
+    }
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+@import 'styles/aboutMe';
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+@import 'styles/mySkills';
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+@import 'styles/contactMe';
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+footer {
+  background-color: #212529;
+}
+
+.footer-style{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-text{
+  font-size: 20px;
+  font-style: italic;
+  color: white;
+  width: 100%;
+  @include JustifyCenter();
+  margin: 20px 0 20px 20px;
+}
+
+.footer-ul{
+  display: flex;
+  flex-wrap: wrap;
+  width: 450px; /*Is used to keep close LI */
+  margin-right: 30px;   /*centring */
+}
+
+.footer-il{
+  width: 33.3%;  /*Used for mobile version to avoid too close content */
+  list-style-type: none;
+  font-size: 20px;
+  @include JustifyCenter();
+  font-size: 25px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+/*------------------------------------------------------------------------------------------------------------------*/
+
+/* Desktop Styles */
+@media only screen and (min-width: 900px) {
+  .header-style{
+    border-bottom: none;
+  }
+  /*------------------------------------------------------------------------------------------------------------------*/
+
+  .presentation-image{
+  height: 800px;
+  }
+  /*------------------------------------------------------------------------------------------------------------------*/
+  .about-me{
+    @include JustifyCenter();;
+    flex-direction: row;
+    height: 650px;
+  }
+  .about-me-style{
+    padding: 30px 0 10px 0;
+  }
+
+  .about-me-text{ /*Is used to change the text style for the entire container*/
+    padding-top: 10px;
+    font-size: 30px;
+    padding-left: 0px;
+  }
+  /*------------------------------------------------------------------------------------------------------------------*/
+  .container-skills{ /*used to manage the position of elements in the block*/
+    @include JustifyCenter();
+  }
+  .skills{
+    display: flex;
+    flex-direction: row;
+    width: 1400px;
+  }
+  /*------------------------------------------------------------------------------------------------------------------*/
+  .speaker-form {
+    width: 550px;
+  }
+  /*------------------------------------------------------------------------------------------------------------------*/
+  .footer-text{
+    width: 40%;
+  }
+
+  .footer-ul{
+    justify-content: flex-end;
+  }
+  .footer-il{
+    width: 25%;
+  }
+}
